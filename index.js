@@ -2,7 +2,7 @@ var ejs = require('./utils/ejs');
 var pdf = require('./utils/pdf');
 var moment = require('moment');
 var data = require('./data/data.json');
-
+ 
 ejs.toHTML('./templates/index.ejs', data).then(function (html) {
     var options = { format: 'Letter' };
     var output = './data/out/pdf_' + moment().format('YYYYMMDDHHmmSS') + '.pdf'
